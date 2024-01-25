@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        .search-container {
+          display: flex;
+          align-items: center;
+          width: 200px;
+          height: 40px;
+          background-color: #f1f1f1;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: width 0.3s ease;
+        }
+        
+        .search-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          background-color: #ccc;
+          color: white;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+        
+        .search-bar {
+          flex-grow: 1;
+          height: 100%;
+          padding: 0 10px;
+          border: none;
+          background-color: transparent;
+          transition: opacity 0.3s ease;
+        }
+        
+        .search-container.expanded {
+          width: 300px;
+        }
+        
+        .search-icon.expanded {
+            
+          background-color: #555;
+        }
+        
+        .search-icon.expanded .fa-search {
+          display: none;
+        }
+        
+        .search-icon.expanded .fa-times {
+          display: block;
+        }
+        
+        .search-bar.expanded {
+          opacity: 1;
+        }
+      </style>
+</head>
+<body>
+    <div class="search-container">
+        <div class="search-icon">  <span class="material-symbols-outlined">
+            search
+            </span>
+          <i class="fas fa-search"></i>
+          <i class="fas fa-times"></i>
+        </div>
+      
+        <input type="text" class="search-bar" placeholder="Search...">
+      </div>
+</body>
+<script src="./b2.js"></script>
+
+</html>
